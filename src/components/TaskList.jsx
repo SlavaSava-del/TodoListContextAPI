@@ -1,10 +1,8 @@
-import { useContext } from "react";
-import { TaskContext } from "../TaskProvider";
 import TaskItem from "./TaskItem";
+import useTask from "../hooks/useTask";
 
 function TaskList() {
-  const { activeTasks, deleteTask, completeTask, currentTime } =
-    useContext(TaskContext);
+  const { activeTasks, deleteTask, completeTask, currentTime } = useTask();
 
   return (
     <ul className="task-list">

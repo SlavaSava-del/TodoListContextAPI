@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { TaskContext } from "./TaskProvider";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import CompletedTaskList from "./components/CompletedTaskList";
 import Footer from "./components/Footer";
+import useTask from "./hooks/useTask";
 
 function App() {
   const {
@@ -15,7 +14,7 @@ function App() {
     sortOrder,
     deleteTask,
     completedTasks,
-  } = useContext(TaskContext);
+  } = useTask();
 
   return (
     <div className="app">

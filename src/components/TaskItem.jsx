@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { TaskContext } from "../TaskProvider";
+import useTask from "../hooks/useTask";
 
 function TaskItem({ task }) {
-  const { deleteTask, completeTask, isOverdue } = useContext(TaskContext);
+  const { deleteTask, completeTask, isOverdue } = useTask();
   const { title, priority, deadline, id, completed } = task;
 
   return (

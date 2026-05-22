@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
-import { TaskContext } from "../TaskProvider";
+import { useState } from "react";
+import useTask from "../hooks/useTask";
 
 function TaskForm() {
-  const { addTask } = useContext(TaskContext);
+  const { addTask } = useTask();
   const [title, setTitle] = useState("");
   const [priority, setPriority] = useState("Low");
   const [deadline, setDeadline] = useState("");
